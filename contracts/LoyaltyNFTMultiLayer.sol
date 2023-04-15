@@ -46,7 +46,7 @@ contract MLM {
             amount -= levelReward;
             referrer = investor.referrer;
         }
-        owner.transfer(amount);
+        payable(owner).transfer(amount);
     }
 
     function withdraw() public {
